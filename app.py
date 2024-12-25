@@ -1,12 +1,10 @@
-from flask import Flask, render_template, url_for
-from datetime import datetime
+# app.py
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    # Pass the current year or any data you want into the template
-    return render_template("index.html", current_year=datetime.now().year)
+    return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# We don't add app.run() here because Vercel will handle that in a serverless manner
