@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Learning Path Advisor</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <!-- Google Fonts (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="branding">
+      <h1>Personal Learning Path Advisor</h1>
+      <p>Your Personalized Journey to Mastering New Skills</p>
+    </div>
+    <a href="#main-content" class="cta-button">Explore Now</a>
+  </header>
+
+  <!-- Main Content -->
+  <section id="main-content" class="info-section">
+    <div class="info-text">
+      <h2>Discover a New Way to Learn</h2>
+      <p>
+        Our AI-powered system harnesses knowledge graphs and intelligent
+        recommendations to build the perfect learning path. No more
+        guesswork. No more confusion. Simply tell us your goals and
+        available time, and we’ll curate a personalized plan just for you!
+      </p>
+      <a href="#" class="secondary-button">Get Started</a>
+    </div>
+    <div class="info-image">
+      <!-- Reference a local image in static/images/ -->
+      <img 
+        src="{{ url_for('static', filename='images/learning_illustration.jpg') }}" 
+        alt="Learning illustration" 
+      />
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>Adaptive Paths</h3>
+        <p>Our system adapts to your progress, reinforcing difficult topics 
+        and accelerating easier ones.</p>
+      </div>
+      <div class="feature">
+        <h3>Transparent Recommendations</h3>
+        <p>Explore exactly why each lesson is recommended—see how topics 
+        connect in our knowledge graph.</p>
+      </div>
+      <div class="feature">
+        <h3>Save Time</h3>
+        <p>Stop wasting time figuring out what to learn next. Let us 
+        structure your journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; {{ current_year|default(2023) }} Personal Learning Path Advisor</p>
+    <p><a href="https://github.com/YourRepo" target="_blank">GitHub</a></p>
+  </footer>
+</body>
+</html>
